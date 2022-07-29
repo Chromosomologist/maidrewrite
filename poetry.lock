@@ -150,14 +150,14 @@ asyncpg = {version = "*", optional = true, markers = "extra == \"postgresql\""}
 sqlalchemy = ">=1.4,<1.5"
 
 [package.extras]
-aiomysql = ["aiomysql"]
-aiopg = ["aiopg"]
-aiosqlite = ["aiosqlite"]
-asyncmy = ["asyncmy"]
-asyncpg = ["asyncpg"]
-mysql = ["aiomysql"]
-postgresql = ["asyncpg"]
 sqlite = ["aiosqlite"]
+postgresql = ["asyncpg"]
+mysql = ["aiomysql"]
+asyncpg = ["asyncpg"]
+asyncmy = ["asyncmy"]
+aiosqlite = ["aiosqlite"]
+aiopg = ["aiopg"]
+aiomysql = ["aiomysql"]
 
 [[package]]
 name = "deprecated"
@@ -175,7 +175,7 @@ dev = ["tox", "bump2version (<1)", "sphinx (<2)", "importlib-metadata (<3)", "im
 
 [[package]]
 name = "disnake"
-version = "2.6.0a4269+ge4f9dc81"
+version = "2.6.0a4317+g6769f80d"
 description = "A Python wrapper for the Discord API"
 category = "main"
 optional = false
@@ -187,7 +187,7 @@ aiohttp = ">=3.7.0,<3.9.0"
 
 [package.extras]
 discord = ["discord-disnake"]
-docs = ["sphinx (>=4.5.0,<4.6.0)", "sphinxcontrib-trio (>=1.1.2,<1.2.0)", "sphinx-hoverxref (>=1.0.1,<1.1.0)", "sphinx-autobuild (>=2021.3,<2022.0)"]
+docs = ["sphinx (>=5.1.1,<5.2.0)", "sphinxcontrib-trio (>=1.1.2,<1.2.0)", "sphinx-hoverxref (==1.1.3)", "sphinx-autobuild (>=2021.3,<2022.0)", "sphinxcontrib-towncrier (==0.2.1a0)", "towncrier (==21.9.0)"]
 speed = ["orjson (>=3.6,<4.0)", "aiodns (>=1.1)", "brotli", "cchardet"]
 voice = ["PyNaCl (>=1.3.0,<1.5)"]
 
@@ -195,11 +195,11 @@ voice = ["PyNaCl (>=1.3.0,<1.5)"]
 type = "git"
 url = "https://github.com/DisnakeDev/disnake"
 reference = "master"
-resolved_reference = "e4f9dc81630414c3015e7f32ea2f45203eaab3e7"
+resolved_reference = "6769f80d5ad346752777755cf006031928d80767"
 
 [[package]]
 name = "disnake-ext-components"
-version = "0.3.0"
+version = "0.4.0"
 description = "A component listener wrapper for disnake"
 category = "main"
 optional = false
@@ -214,7 +214,7 @@ typing-extensions = "*"
 type = "git"
 url = "https://github.com/DisnakeCommunity/disnake-ext-components"
 reference = "master"
-resolved_reference = "a7f086e73f5e5596380b63766df27e926a016d61"
+resolved_reference = "3d3f89dd7635b7d4101e63b0412b53f21ae69732"
 
 [[package]]
 name = "distlib"
@@ -302,10 +302,10 @@ aiohttp = "*"
 pydantic = "*"
 
 [package.extras]
-all = ["browser-cookie3", "rsa", "click"]
-cli = ["click"]
-cookies = ["browser-cookie3"]
 geetest = ["rsa"]
+cookies = ["browser-cookie3"]
+cli = ["click"]
+all = ["click", "rsa", "browser-cookie3"]
 
 [[package]]
 name = "greenlet"
@@ -432,8 +432,8 @@ pydantic = ">=1.9.0,<2.0.0"
 sqlalchemy = ">=1.4.29,<2.0.0"
 
 [package.extras]
-dev = ["black", "flake8", "isort", "pip-tools", "py-githooks", "pygithub", "semver", "twine", "wheel", "codecov", "coverage", "invoke", "psycopg2-binary", "pytest", "pytest-asyncio"]
-test = ["codecov", "coverage", "invoke", "psycopg2-binary", "pytest", "pytest-asyncio"]
+test = ["pytest-asyncio", "pytest", "psycopg2-binary", "invoke", "coverage", "codecov"]
+dev = ["pytest-asyncio", "pytest", "psycopg2-binary", "invoke", "coverage", "codecov", "wheel", "twine", "semver", "pygithub", "py-githooks", "pip-tools", "isort", "flake8", "black"]
 
 [[package]]
 name = "packaging"
@@ -684,7 +684,7 @@ python-versions = "*"
 
 [[package]]
 name = "wikitextparser"
-version = "0.49.2"
+version = "0.49.4"
 description = "A simple parsing tool for MediaWiki's wikitext markup."
 category = "main"
 optional = false
@@ -721,7 +721,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "644d1830c3acfdb3d556f4094c8df836ba4be2e117843b0a47382d774f5ef2c0"
+content-hash = "5df6250a562601a840c9fe9895016ccd0540ec33ae220e880b208b75119c9615"
 
 [metadata.files]
 aiohttp = [
@@ -1444,8 +1444,8 @@ wcwidth = [
     {file = "wcwidth-0.2.5.tar.gz", hash = "sha256:c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83"},
 ]
 wikitextparser = [
-    {file = "wikitextparser-0.49.2-py3-none-any.whl", hash = "sha256:1e2d420e226d6e7d334efefc532d722c25b9f16c06c9f1f923a3667cc3aa889d"},
-    {file = "wikitextparser-0.49.2.tar.gz", hash = "sha256:7a456d4c4b81499cb5edb9a7e0467955ddf4773434a6b3eeeab08d4a3a91ea31"},
+    {file = "wikitextparser-0.49.4-py3-none-any.whl", hash = "sha256:c33d143f3743fed9c25d3f07dd69f8d46612e5b237bc00b12fcd4391cf6d9f61"},
+    {file = "wikitextparser-0.49.4.tar.gz", hash = "sha256:0f79253209606c6b16c07c9fdeeed195bdd3408d141a7ca051c35eecb79b60ed"},
 ]
 wrapt = [
     {file = "wrapt-1.14.1-cp27-cp27m-macosx_10_9_x86_64.whl", hash = "sha256:1b376b3f4896e7930f1f772ac4b064ac12598d1c38d04907e696cc4d794b43d3"},
